@@ -83,7 +83,7 @@ export default function SearchPage(props) {
                         <img src={item.thumbnail} alt="product"></img>
                         <h3>{item.title}</h3>
                         <p>{item.description}</p>
-                        <Link to={`/react-catalog/products/${item.id}`}>
+                        <Link to={`/react-catalog/products/${item.id-1}`}>
                             <button>
                                 VER
                             </button>

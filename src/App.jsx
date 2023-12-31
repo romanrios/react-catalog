@@ -48,7 +48,7 @@ function App() {
 
           <Route path="/react-catalog/products/:productId" element={<Product setLoading={setLoading} loading={loading} />} />
 
-          <Route path="*" element={<NotFound setLoading={setLoading} loading={loading} />} />
+          <Route path="/react-catalog/*" element={<NotFound setLoading={setLoading} loading={loading} />} />
 
         </Routes>
 
