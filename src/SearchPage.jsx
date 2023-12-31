@@ -78,12 +78,12 @@ export default function SearchPage(props) {
 
         <div id="productosresultados">
             <ul>
-                {filteredResults.slice(0, CANTIDAD).map((item, index) => {
+                {filteredResults.slice(0, CANTIDAD).map((item) => {
                     return <li className="unproducto" key={item.id}>
                         <img src={item.thumbnail} alt="product"></img>
                         <h3>{item.title}</h3>
                         <p>{item.description}</p>
-                        <Link to={`/products/${index}`}>
+                        <Link to={`/react-catalog/products/${item.id}`}>
                             <button>
                                 VER
                             </button>

@@ -7,7 +7,7 @@ import Product from './Product'
 import { useEffect, useState } from 'react';
 import CONFIG from './config/config';
 import { mockdata } from './constants/products';
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import NotFound from './NotFound';
 
 function App() {
@@ -37,13 +37,16 @@ function App() {
       <main>
 
         <Routes>
-          <Route path="/" element={
+
+          <Route path="/" element={<Navigate to="/react-catalog" />} />
+
+          <Route path="/react-catalog" element={
             loading ? <Spinner /> : <div>
               <SearchPage theproducts={allResults} />
             </div>
           } />
 
-          <Route path="/products/:productId" element={<Product setLoading={setLoading} loading={loading} />} />
+          <Route path="/react-catalog/products/:productId" element={<Product setLoading={setLoading} loading={loading} />} />
 
           <Route path="*" element={<NotFound setLoading={setLoading} loading={loading} />} />
 

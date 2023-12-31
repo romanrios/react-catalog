@@ -233,3 +233,14 @@ footer {
   flex-direction: column;
   gap: 5rem;
 }
+
+
+/* NOT FOUND */
+#info {
+  margin-top: 3rem;
+}
+
+#volver,
+.notfound-volver {
+  cursor: pointer;
+}

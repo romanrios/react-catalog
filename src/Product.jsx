@@ -28,6 +28,7 @@ export default function Product(props) {
                 props.setLoading(false);
             }, CONFIG.loading_timeout_ms);
         }
+        // eslint-disable-next-line
     }, []);
 
 
@@ -37,7 +38,7 @@ export default function Product(props) {
             <Location />
 
             <div className='product-container'>
-                <img src={product.thumbnail} />
+                <img src={product.thumbnail} alt="product"/>
                 <div className='product-info'>
                     <h2 id="titulo"> {product.title} </h2>
                     <p><i>{product.description}</i></p>
@@ -49,7 +50,7 @@ export default function Product(props) {
                 </div>
             </div>
 
-            <Link to='/'>
+            <Link to='/react-catalog'>
                 <button id='volver'>
                     Volver
                 </button>

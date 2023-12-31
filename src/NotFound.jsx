@@ -14,6 +14,7 @@ export default function NotFound(props) {
         return () => {
             clearTimeout(timeoutId); // Limpia el temporizador al desmontar el componente
         };
+        // eslint-disable-next-line
     }, []);
 
 
@@ -21,7 +22,7 @@ export default function NotFound(props) {
 
         <p id="info">Ruta no encontrada</p>
 
-        <button id='volver'> <Link to='/'>Volver</Link> </button>
+        <Link to='/react-catalog' className='notfound-volver'><button id='volver'>Volver</button></Link>
 
     </div>)
 
